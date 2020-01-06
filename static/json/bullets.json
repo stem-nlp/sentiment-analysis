@@ -1,0 +1,7 @@
+[
+  {"title":"location_traffic_convenience","ranges":[-2,-1,0,1],"measures":[-2],"markers":[-2]},
+  {"title":"location_distance_from_business_district","ranges":[0,1,2,3],"measures":[1],"markers":[2]},
+  {"title":"location_easy_to_find","subtitle":"US$, average","ranges":[350,500,600],"measures":[100,320],"markers":[550]},
+  {"title":"service_wait_time","subtitle":"count","ranges":[1400,2000,2500],"measures":[1000,1650],"markers":[2100]},
+  {"title":"service_waiters_attitude","subtitle":"out of 5","ranges":[3.5,4.25,5],"measures":[3.2,4.7],"markers":[4.4]}
+]
