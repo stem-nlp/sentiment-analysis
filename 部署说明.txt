@@ -8,7 +8,7 @@ python -m venv venv
 4. 激活虚拟环境
         . venv/bin/activate
 5. 安装依赖
-    pip install -r requirements.txt
+    pip3 install -r requirements.txt
 6. 退出虚拟环境
     deactivate
 7. 启动uwsgi
