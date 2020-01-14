@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
-		<title>Smoothed D3.js Radar Chart</title>
+		<title>文本细粒度分类模型</title>
 
 		<!-- Google fonts -->
 		<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300' rel='stylesheet' type='text/css'>
@@ -126,17 +126,19 @@
 							</li>
 						</ul>
 
-						<h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">
-							<span>ABOUT</span>
-							<a class="d-flex align-items-center text-muted" href="#">
-								<span data-feather="plus-circle"></span>
-							</a>
-						</h6>
 						<ul class="nav flex-column mb-2">
 							<li class="nav-item">
-								<a class="nav-link" href="#">
+								<a class="nav-link" href="/">
 									<span data-feather="file-text"></span>
-									使用说明
+									D3图
+								</a>
+							</li>
+						</ul>
+						<ul class="nav flex-column mb-2">
+							<li class="nav-item">
+								<a class="nav-link" href="/main2">
+									<span data-feather="file-text"></span>
+									bar图
 								</a>
 							</li>
 						</ul>
@@ -159,13 +161,16 @@
                     </div>
 
                     <div class="charts">
+
                         <div class="radarChart"></div>
                         <div class="radarChart2"></div>
                         <div class="pie"></div>
                     </div>
+			        <div id="container" style="height: 70%"></div>
                 </main>
 
 			</div>
+
 		</div>
 <!--		<script src="static/js/jquery-3.3.1.min.js" crossorigin="anonymous"></script>-->
 		<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>

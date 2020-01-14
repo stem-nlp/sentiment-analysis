@@ -10,6 +10,14 @@ app = Flask(__name__)
 def main():
     return render_template("main.html")
 
+@app.route("/main", methods=["GET"])
+def main1():
+    return render_template("main.html")
+
+@app.route("/main2", methods=["GET"])
+def main2():
+    return render_template("main2.html")
+
 @app.route("/extractNotice", methods=["GET"])
 def extractNotice():
     return render_template("extractNotice.html")
@@ -25,6 +33,7 @@ def RadialBoxplot():
 @app.route("/ClusterDendrogram", methods=["GET"])
 def ClusterDendrogram():
     return render_template("ClusterDendrogram/index.html")
+
 
 # @app.route('/api/model', methods=["POST"])
 @app.route('/api/model', methods=["POST"])
@@ -43,6 +52,7 @@ def model():
         print(str(e))
         return jsonify({"code": -1, "data": str(e)})
 
+
 @app.route('/api/getmodel', methods=["GET"])
 @cross_origin()
 def getmodel():
@@ -54,6 +64,7 @@ def getmodel():
     except Exception as e:
         print(str(e))
         return jsonify({"code": -1, "data": str(e)})
+
 
 if __name__ == '__main__':
     app.run()

@@ -1,6 +1,4 @@
 
-function fillOutput(result){
-}
 
 $("#start-button").click(()=>{
     showSummary();
@@ -160,7 +158,7 @@ function showSummary(){
 
 								treeChart(treeChartData);
 
-//								barChart();
+  							  //  barChart();
 						}
 					});
 
