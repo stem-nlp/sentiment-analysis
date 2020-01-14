@@ -29,7 +29,7 @@
 			 #start-button {
 			 	position:relative;
 			 	left:50%;
-			 	transform:translateX(-25%);
+			 	transform:translateX(-50%);
 			 }
 
 			@media (min-width: 768px) {
@@ -56,9 +56,17 @@
 				fill: #333333;
 			}
 
+			.main-body {
+			 	position: absolute;
+			 	right:0;
+			 	height:100%;
+			}
 			.charts{
 				margin: 0 auto;
-				margin-top: 60px;
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				transform:translateX(-50%);
 			}
 			.radarChart{
 				float: left;
@@ -68,9 +76,35 @@
 			}
 			.pie{
 				float: left;
-
-		}
+				text-align: center;
+		    }
 		</style>
+
+
+		<style>
+			/*樹狀圖*/
+			.node circle {
+				fill: #fff;
+				stroke: steelblue;
+				stroke-width: 1.5px;
+			}
+			.node {
+				font: 12px sans-serif;
+			}
+			.link {
+				fill: none;
+				stroke: #ccc;
+				stroke-width: 1.5px;
+			}
+
+			.treeDiv{
+				margin-top:10rem;
+
+			}
+
+		</style>
+
+
 	 <link href="static/css/main.css" rel="stylesheet">
 	</head>
 	<body>
@@ -109,52 +143,52 @@
 					</div>
 				</nav>
 
-				<main role="main" class="col-md-11 ml-sm-auto col-lg-11   px-4">
-					<div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-						<h2 class="h2">文本细粒度分类模型</h2>
-					</div>
-					<div class="form-group">
-						<textarea class="form-control" id="input-body" rows="10" placeholder="输入待分析的新闻正文"></textarea>
-					</div>
+				<main role="main" class="col-md-11 ml-sm-auto col-lg-11 px-4 main-body">
 
-					<button type="button" class="btn btn-outline-info btn-lg" id="start-button" name="start-button">
-						开始分析
-					</button>
-				</main>
-				<div class="charts">
-					<div class="radarChart"></div>
-					<div class="radarChart2"></div>
-					<div class="pie"></div>
-				</div>
+                    <div class="main-body-text">
+                        <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+                            <h2 class="h2">文本细粒度分类模型</h2>
+                        </div>
+                        <div class="form-group">
+                            <textarea class="form-control" id="input-body" rows="10" placeholder="输入待分析的新闻正文"></textarea>
+                        </div>
+
+                        <button type="button" class="btn btn-outline-info btn-lg" id="start-button" name="start-button">
+                            开始分析
+                        </button>
+                    </div>
+
+                    <div class="charts">
+                        <div class="radarChart"></div>
+                        <div class="radarChart2"></div>
+                        <div class="pie"></div>
+                    </div>
+                </main>
+
 			</div>
 		</div>
+<!--		<script src="static/js/jquery-3.3.1.min.js" crossorigin="anonymous"></script>-->
+		<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+		<script src="static/bootstrap-4.3.1/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+		<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts/dist/echarts.min.js"></script>
+		<script src="static/js/main.js"></script>
+		<script src="static/js/radarChart.js"></script>
+		<script src="static/js/draw.js" ></script>
 		<script>
-      /* Radar chart design created by Nadieh Bremer - VisualCinnamon.com */
-      
-			////////////////////////////////////////////////////////////// 
-			//////////////////////// Set-Up ////////////////////////////// 
-			////////////////////////////////////////////////////////////// 
+            /* Radar chart design created by Nadieh Bremer - VisualCinnamon.com */
+
+			//////////////////////////////////////////////////////////////
+			//////////////////////// Set-Up //////////////////////////////
+			//////////////////////////////////////////////////////////////
 
 			var margin = {top: 50, right: 50, bottom: 50, left: 100},
 				width = 220//Math.min(700, window.innerWidth - 10) - margin.left - margin.right,
 				height = 220//Math.min(width, window.innerHeight - margin.top - margin.bottom - 20);
-					
-			////////////////////////////////////////////////////////////// 
-			////////////////////////// Data ////////////////////////////// 
+
 			//////////////////////////////////////////////////////////////
-
-
-
-			d3.json("static/json/analysis.json",function(d){
-
-
-			});
+			////////////////////////// Data //////////////////////////////
+			//////////////////////////////////////////////////////////////
 		</script>
-		<script src="static/js/jquery-3.3.1.min.js" crossorigin="anonymous"></script>
-		<script src="static/bootstrap-4.3.1/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
-		<script src="static/js/main.js"></script>
-		<script src="static/js/radarChart.js"></script>
-		<script src="static/js/draw.js" ></script>
 
 	</body>
 </html>
