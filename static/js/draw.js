@@ -1,4 +1,6 @@
 function draw(id,d){
+
+
   var width = 300,
       height = 300,
       radius = Math.min(width, height) / 2,
@@ -43,13 +45,23 @@ function draw(id,d){
     return color;
   }
 
+//    var data=[];
+//    for (var i in d){
+//      if (i!="id" && i!="content"){
+//        for (var j in d[i]){
+//          data.push({color:color16(),label: i+"-"+j,score: d[i][j]+2,width: 1})
+//        };
+//      };
+//    };
+//
+//    var data=[];
+//    for (var i in d){
+//      if (i!="id" && i!="content"){data.push({color:color16(),label: i,score: d[i]+2,width: 1})};
+//    };
+
     var data=[];
     for (var i in d){
-      if (i!="id" && i!="content"){
-        for (var j in d[i]){
-          data.push({color:color16(),label: i+"-"+j,score: d[i][j]+2,width: 1})
-        };
-      };
+      if (i!="id" && i!="content"){data.push({color:color16(),label: i,score: Number(d[i])+2,width: 1})};
     };
 
     var path = svg.selectAll(".solidArc")
